@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Expletus Sans', cursive;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;
+    background: #006666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a {
+    font-size: 18px;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #14DE55;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background: #cccccc;
+    color: #f5f5f5;
+    font-weight: 700;
+    background-image: url(images/banner1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+#home h1 {
+    font-size: 7em;
+}
+
+#home h3 {
+    font-size: 3.5em;
+}
+
+#skills {
+    display: grid;
+    min-block-size: 100vh;
+    place-content: center;
+    font-family: system-ui;
+    font-size: 1.125rem;
+    background-color: #e0dcdc;
+    padding: 30px 40px;
+}
+
+#skills h2 {
+    text-align: center;
+    color: #DE3B14;
+}
+
+.tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+
+.scroller .tag-list li {
+    padding: 1rem;
+    background: #006666;
+    color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem -0.25rem #363636;
+}
+
+.scroller {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.scroller_inner {
+    display: flex;
+    gap: 1rem;
+    padding-block: 2rem;
+    flex-wrap: wrap;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 20%,
+            white 80%,
+            transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller_inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+#skills .description-skills {
+    border: 1px solid #5E3F38;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.description-skills ul {
+    list-style: none;
+}
+
+.description-skills ul li {
+    margin-bottom: 1rem;
+}
+
+.description-skills ul li span {
+    color: #DE3B14;
+}
+
+#projects {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.t-projects {
+    color: #DE3B14;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 27px;
+}
+
+
+.project {
+    margin-bottom: 60px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #5E3F38;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+#contact {
+    width: 100%;
+    height: 100vh;
+    background-color: #e0dcdc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #DE3B14;
+    margin-bottom: 60px;
+    font-size: 27px;
+}
+
+.contacts {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 30px 40px;
+    border: 1px solid #5E3F38;
+    border-radius: 7px;
+}
+
+.text {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.text h4 {
+    margin-bottom: 10px;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+}
+
+.contatos h4 {
+    margin-bottom: 10px;
+}
+
+.contatos span i {
+    font-size: 20px;
+    color: #14DE55;
+    margin-right: 10px;
+}
+
+.contatos .email {
+    font-size: 20px;
+    color: red;
+}
+
+.contatos span a {
+    text-decoration: none;
+    color: #5E3F38;
+    font-size: 20px;
+}
+
+.contatos span {
+    margin-bottom: 5px;
+}
+
+.extras {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.extras a {
+    margin: 30px;
+}
+
+a .git {
+    color: #363636;
+    font-size: 20px;
+}
+
+a .pdf {
+    color: red;
+    font-size: 20px;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon .icon {
+        font-size: 26px;
+        color: #f5f5f5;
+    }
+
+    .mobile-menu-icon button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .menu-mobile .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.2rem;
+        font-size: 18px;
+        color: #f5f5f5;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 35px;
+        transition: .3s;
+        margin: 0;
+    }
+
+    .menu-mobile .nav-item:hover,
+    .menu-mobile .nav-item.active {
+        color: #14DE55;
+    }
+
+    .open {
+        display: block;
+    }
+
+    #home h1 {
+        font-size: 1.5em;
+    }
+
+    #home h3 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .scroller {
+        margin: 0;
+    }
+
+    .project {
+        width: 45%;
+        margin-top: 10px;
+    }
+
+    .t-projects {
+        top: 1%;
+    }
+
+    #contact {
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project {
+        width: 100%
+    }
+
+    #contact {
+        margin-top: 70rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #contact {
+        margin-top: 70rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #contact {
+        margin-top: 80rem;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-height: 667px) {
+    #contact {
+        height: 900px;
+        margin-top: 85rem;
+    }
+}
+
+@media screen and (max-height: 896px) {
+    #contact {
+        height: 1000px;
+    }
+}
