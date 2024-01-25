@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h2 {
+    margin: 10px 0;
+    font-size: 32px;
+}
+
+.container h3 {
+    font-size: 26px;
+}
+
+.container p {
+    font-size: 20px;
+}
